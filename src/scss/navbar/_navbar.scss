@@ -1,0 +1,37 @@
+@import 'buttons';
+@import 'dropdown';
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  margin-left: 30px;
+  margin-right: 30px;
+  .nav-desktop-container {
+    display: flex;
+    align-items: center;
+  }
+}
+.bold-text {
+  font-weight: bold;
+}
+.nav-title {
+  font-size: 34px;
+  letter-spacing: 4px;
+  font-style: normal;
+  font-weight: normal;
+  color: $aqua;
+  margin: 0;
+}
+
+//mobile
+@media only screen and (max-width: 700px) {
+  .nav-desktop-container {
+    display: none;
+  }
+  .nav-container {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}

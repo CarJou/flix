@@ -1,0 +1,74 @@
+@mixin btn-header {
+  height: 56px;
+  width: 248px;
+  border: none;
+  color: $white;
+  letter-spacing: 4px;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  cursor: pointer;
+}
+header.container {
+  width: 100%;
+  height: auto;
+  position: relative;
+  background: url('../../assets/images/Bkg.png') no-repeat center center/cover;
+}
+
+.header-content {
+  position: relative;
+  z-index: 2;
+  // width: 65%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 12rem;
+  background: linear-gradient(180deg, rgba(36, 36, 36, 0) 0%, #242424 100%);
+}
+
+.title-header {
+  color: $white;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 4px;
+  .bold-text {
+    font-weight: bold;
+  }
+}
+
+.title-movie {
+  font-size: 76px;
+  letter-spacing: 12px;
+  color: $aqua;
+  font-weight: bold;
+}
+
+.container-btn-header {
+  display: flex;
+  flex-direction: column;
+  .btn-play {
+    background-color: $grey;
+    @include btn-header;
+    transition: transform 0.3s, opacity 0.3s, background 0.4s;
+    &:hover {
+      background: $btn-gradient;
+      transform: scale(1.02);
+    }
+  }
+  .btn-list {
+    @include btn-header;
+    background: rgba(36, 36, 36, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    margin-top: 20px;
+    transition: transform 0.3s, opacity 0.3s, background 0.4s;
+    &:hover {
+      background: $btn-gradient;
+      transform: scale(1.02);
+    }
+  }
+}

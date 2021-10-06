@@ -1,0 +1,64 @@
+@mixin btn-nav {
+  background-color: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.btn-add-desktop {
+  @include btn-nav;
+  align-items: center;
+  color: $white;
+  margin-left: 30px;
+  font-size: 18px;
+  letter-spacing: 4px;
+  .img-add-desktop {
+    margin: 12px;
+  }
+}
+.img-user {
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+}
+.btn-nav-user {
+  @include btn-nav;
+}
+.btn-nav-not,
+.btn-burger {
+  @include btn-nav;
+  margin-right: 30px;
+}
+.btn-nav-add-mobile {
+  display: none;
+}
+//mobile
+@media only screen and (max-width: 700px) {
+  .btn-add-desktop,
+  .btn-nav-not,
+  .btn-burger {
+    display: none;
+  }
+  .btn-nav-add-mobile {
+    display: initial;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 1px solid $white;
+    transition: transform 0.3s, opacity 0.3s, background 0.4s, border 0.3s;
+    background-color: transparent;
+    &:hover {
+      background: rgba(36, 36, 36, 0.5);
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      transform: scale(1.02);
+    }
+    .img-add {
+      background-color: transparent;
+      &:hover {
+        transform: scale(1.02);
+      }
+    }
+  }
+}
