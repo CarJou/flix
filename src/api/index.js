@@ -1,7 +1,7 @@
-import axios from 'axios';
+const BASE_URL = 'https://api.themoviedb.org/3';
 
-const apiKey = process.env.TMDB_API_KEY;
-console.log(apiKey);
-const url = 'https://api.themoviedb.org/3';
-const nowPlaying = `${url}/movie/now_playing`;
-const popularUrl = `${url}/movie/popular`;
+const api = {
+  NOW_PLAYING: `${BASE_URL}/movie/now_playing?api_key=6f26fd536dd6192ec8a57e94141f8b20`,
+  POPULAR_URL: `${BASE_URL}/movie/popular?api_key=6f26fd536dd6192ec8a57e94141f8b20`,
+};
+export default api;
