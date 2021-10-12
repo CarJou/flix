@@ -20,7 +20,7 @@ const Header = ({ fetchUrl, imgUrl }) => {
     <header className="container">
       {trending &&
         trending.map((movie) => (
-          <div className="header-content">
+          <div className="header-content" key={movie.id}>
             <img
               src={`${imgUrl}${movie.backdrop_path}`}
               alt={movie.title}
