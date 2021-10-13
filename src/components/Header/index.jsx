@@ -14,7 +14,6 @@ const Header = ({ fetchUrl, imgUrl }) => {
     };
     fetchData();
   }, []);
-  console.log('trending', trending);
 
   return (
     <header className="container">
