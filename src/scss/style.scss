@@ -4,6 +4,9 @@
 @import './navbar/navbar';
 @import './header/header';
 @import './card/card';
+@import './link';
+@import './dropdown/dropdown';
+@import './addMovie/addMovie';
 
 * {
   font-family: $font-bebas;

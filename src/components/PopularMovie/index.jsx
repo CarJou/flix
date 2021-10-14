@@ -4,6 +4,7 @@ import axios from 'axios';
 import star from '../../assets/icons/star.png';
 import Zoom from 'react-reveal/Zoom'; // Importing Zoom effect
 import Fade from 'react-reveal/Fade';
+import Dropdown from '../Dropdown';
 
 const PopularMovie = ({ fetchUrl, imgUrl }) => {
   const [popularMovie, setPopularMovie] = useState([]);
@@ -23,6 +24,7 @@ const PopularMovie = ({ fetchUrl, imgUrl }) => {
 
   return (
     <div className="card-container">
+      <Dropdown />
       {popularMovie &&
         popularMovie.map((movie) => (
           <Zoom>
@@ -38,7 +40,6 @@ const PopularMovie = ({ fetchUrl, imgUrl }) => {
                 <Fade left>
                   <div className="card-header-info">
                     <button className="button-card"></button>
-
                     <h1 className="card-title">{movie.title}</h1>
                   </div>
                 </Fade>

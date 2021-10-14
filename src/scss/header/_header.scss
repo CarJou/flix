@@ -52,7 +52,7 @@ header.container {
 }
 
 .title-movie {
-  font-size: 3em;
+  font-size: 2em;
   letter-spacing: 12px;
   color: $aqua;
   font-weight: bold;
@@ -86,5 +86,32 @@ header.container {
       background: $btn-gradient;
       transform: scale(1.02);
     }
+  }
+}
+//desktop
+@media only screen and (min-width: 670px) {
+  .title-movie {
+    text-align: left;
+  }
+  .movie_content {
+    padding: 35px;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .container-btn-header .btn-list {
+    margin-top: 0;
+    margin-left: 22px;
+  }
+  .container-btn-header {
+    flex-direction: row;
+    margin-top: 0px;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  .title-movie {
+    width: 70%;
+    font-size: 4em;
   }
 }

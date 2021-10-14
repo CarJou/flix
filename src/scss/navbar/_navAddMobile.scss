@@ -1,0 +1,20 @@
+.nav-add-desktop {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.nav-add-mobile {
+  display: none;
+}
+@media only screen and (max-width: 700px) {
+  .nav-add-desktop {
+    display: none;
+  }
+  .nav-add-mobile {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+  }
+}

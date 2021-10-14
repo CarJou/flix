@@ -1,3 +1,40 @@
+.drop-container {
+  display: flex;
+  align-items: center;
+  margin-top: 35px;
+  margin-bottom: 35px;
+}
+select {
+  letter-spacing: 4px;
+  font-size: 20px;
+  font-weight: 500;
+  color: $white;
+  border: none;
+  background-color: transparent;
+  //appearance: none;
+  //padding: 0 1em 0 0;
+  margin-left: 10px;
+  width: 100%;
+  cursor: inherit;
+  line-height: inherit;
+  outline: none;
+
+  &:focus-visible {
+    outline: none;
+    background: transparent;
+  }
+}
+option {
+  border: none;
+  background-color: $grey;
+}
+.label-drop {
+  color: $white;
+  font-weight: normal;
+  letter-spacing: 3px;
+  font-size: 20px;
+}
+/*
 .container-drop {
   clip-path: polygon(0 8%, 92% 8%, 100% 0, 100% 100%, 0 100%);
   z-index: 5;
@@ -35,8 +72,10 @@
   }
 }
 
-.link-to {
-  text-decoration: none;
-  color: $white;
-  font-weight: normal;
+*/
+//desktop
+@media only screen and (min-width: 670px) {
+  .drop-container {
+    margin: 0;
+  }
 }

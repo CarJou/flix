@@ -1,3 +1,9 @@
 .link-to {
   text-decoration: none;
 }
+a.link-to-mobile {
+  display: none;
+  @media only screen and (max-width: 700px) {
+    display: flex;
+  }
+}

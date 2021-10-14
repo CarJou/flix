@@ -1,13 +1,17 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Dropdown = () => {
-  const [drop, setDrop] = useState(false);
   return (
-    <>
-      <div>
-        <h1>VER:</h1>
-      </div>
+    <div className="drop-container">
+      <label for="movie" className="label-drop">
+        VER:
+      </label>
+      <select name="movie">
+        <option value="popular">POPULARES</option>
+        <option value="my movie">MIS PELICULAS</option>
+      </select>
+      {/*
       <nav className="container-drop">
         <ul className="list-container">
           <Link to="/" className="link-to">
@@ -17,8 +21,8 @@ const Dropdown = () => {
             <li className="list-style">MIS PELICULAS</li>
           </Link>
         </ul>
-      </nav>
-    </>
+      </nav> */}
+    </div>
   );
 };
 export default Dropdown;

@@ -134,3 +134,23 @@
 .card-info {
   display: none;
 }
+//desktop
+@media only screen and (min-width: 1000px) {
+  .card-container {
+    width: 20%;
+    top: 62%;
+    transform: translate(-50%, -50%);
+    left: 90%;
+    /* right: 20%; */
+    position: absolute;
+    z-index: 22;
+  }
+  .card-content {
+    margin: 2px;
+  }
+  .card-title {
+    letter-spacing: 0;
+    font-size: 0.9em;
+    margin-left: 0px;
+  }
+}
