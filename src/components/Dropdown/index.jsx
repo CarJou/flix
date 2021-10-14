@@ -1,19 +1,26 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-const Dropdown = () => {
+const Dropdown = ({ history }) => {
+  function handleOnClick() {
+    history.push('/chat');
+  }
   return (
     <div className="drop-container">
       <label for="movie" className="label-drop">
         VER:
       </label>
       <select name="movie">
-        <option value="popular">POPULARES</option>
+        <option value="popular" onClick={handleOnClick}>
+          POPULARES
+        </option>
         <option value="my movie">MIS PELICULAS</option>
       </select>
       {/*
+
       <nav className="container-drop">
         <ul className="list-container">
+         
           <Link to="/" className="link-to">
             <li className="list-style">POPULARES</li>
           </Link>
@@ -21,7 +28,7 @@ const Dropdown = () => {
             <li className="list-style">MIS PELICULAS</li>
           </Link>
         </ul>
-      </nav> */}
+</nav>     */}
     </div>
   );
 };

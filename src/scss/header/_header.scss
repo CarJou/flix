@@ -21,7 +21,8 @@ header.container {
 .header-content {
   z-index: 2;
   // width: 65%;
-  height: 95vh;
+  //height: 95vh;
+  height: 92vh;
   margin: auto;
   display: flex;
   flex-direction: column;
@@ -36,7 +37,8 @@ header.container {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  //height: 100%;
+  height: 89vh;
   object-fit: cover;
   z-index: -2;
 }
@@ -100,18 +102,27 @@ header.container {
     align-items: flex-start;
     flex-direction: column;
   }
+
   .container-btn-header .btn-list {
     margin-top: 0;
     margin-left: 22px;
   }
   .container-btn-header {
     flex-direction: row;
-    margin-top: 0px;
+    margin-top: 50px;
   }
 }
+//desktop
 @media only screen and (min-width: 1000px) {
   .title-movie {
     width: 70%;
     font-size: 4em;
+  }
+
+  .header-content {
+    height: 98vh;
+  }
+  .img_fullscreen {
+    height: 100vh;
   }
 }
