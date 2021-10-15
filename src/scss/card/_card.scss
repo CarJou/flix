@@ -125,7 +125,7 @@
   font-weight: normal;
   font-style: normal;
   font-size: 1.2em;
-  line-height: 19px;
+  line-height: 1;
   text-align: center;
   margin-top: 13px;
 }
@@ -135,15 +135,24 @@
   display: none;
 }
 //desktop
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 420px) {
+  .card-container {
+    padding: 25px;
+  }
+  .card-title {
+    font-size: 2em;
+  }
+}
+
+@media only screen and (min-width: 940px) {
   .card-container {
     width: 20%;
-    top: 62%;
+    top: 52%;
     transform: translate(-50%, -50%);
     left: 90%;
-    /* right: 20%; */
     position: absolute;
     z-index: 22;
+    padding: 0;
   }
   .card-content {
     margin: 2px;
@@ -152,5 +161,11 @@
     letter-spacing: 0;
     font-size: 0.9em;
     margin-left: 0px;
+  }
+}
+@media only screen and (min-width: 1120px) {
+  .card-container {
+    top: 55%;
+    width: 15%;
   }
 }

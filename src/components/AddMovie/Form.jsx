@@ -45,13 +45,15 @@ const Form = ({ createMovie }) => {
     <>
       <div className="add-movie-container">
         <h1 className="title-add-movie">Agregar película</h1>
-        <form onSubmit={submitForm}>
+
+        <form className="form-content" onSubmit={submitForm}>
           <label>Nombre película</label>
           <input
             type="text"
             name="title"
             value={title}
             onChange={handleChange}
+            className="input-title"
           />
           {error ? <span>Error</span> : null}
           <button type="submit">Agregar</button>
