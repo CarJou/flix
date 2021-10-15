@@ -1,13 +1,12 @@
 import React from 'react';
 import UserButton from '../UserButton';
-import Close from '../../../assets/icons/cerrar.png';
 import { Link } from 'react-router-dom';
 const NavAddMobile = () => {
   return (
     <>
       <div className="nav-add-desktop">
         <Link to={'/'}>
-          <img src={Close} alt="icon close" />
+          <button className="nav-btn-close"></button>
         </Link>
       </div>
       <div className="nav-add-mobile">

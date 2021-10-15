@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import Dropzone from 'react-dropzone';
 import { v4 as uuid } from 'uuid';
 
@@ -47,16 +48,25 @@ const Form = ({ createMovie }) => {
         <h1 className="title-add-movie">Agregar película</h1>
 
         <form className="form-content" onSubmit={submitForm}>
-          <label>Nombre película</label>
           <input
             type="text"
             name="title"
             value={title}
             onChange={handleChange}
-            className="input-title"
+            className="input-text"
+            placeholder="Título"
           />
-          {error ? <span>Error</span> : null}
-          <button type="submit">Agregar</button>
+          {error ? (
+            <span className="form-error">¡Incluya un título!</span>
+          ) : null}
+          <div className="btn-form-container">
+            <button type="submit" className="btn-add">
+              subir película
+            </button>
+            <Link to="/">
+              <button className="btn-next">salir</button>
+            </Link>
+          </div>
         </form>
       </div>
     </>

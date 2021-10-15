@@ -13,10 +13,78 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 60px;
 }
 
-.input-title {
+.input-text {
   background-color: transparent;
   border: none;
   border-bottom: 1px solid $white;
+  width: 248px;
+  text-align: center;
+  color: $white;
+  font-size: 20px;
+  letter-spacing: 4px;
+
+  &::placeholder {
+    color: $white;
+    text-align: center;
+    letter-spacing: 4px;
+  }
+  &:focus-visible {
+    outline: none;
+  }
+}
+
+.form-error {
+  padding: 8px;
+  color: aqua;
+  letter-spacing: 4px;
+}
+
+.btn-form-container {
+  margin-top: 45px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@mixin btn-form {
+  height: 56px;
+  width: 248px;
+  border: none;
+  letter-spacing: 4px;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  cursor: pointer;
+  margin-top: 20px;
+}
+.btn-add {
+  @include btn-form;
+  background: $btn-grey;
+  color: $grey;
+
+  transition: transform 0.3s, opacity 0.6s, color 0.4s;
+  &:hover {
+    color: $white;
+    opacity: 0.5;
+    transform: scale(1.02);
+  }
+}
+
+.btn-next {
+  @include btn-form;
+  color: $white;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  transition: transform 0.3s;
+  &:hover {
+    transform: scale(1.02);
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .btn-next {
+    display: none;
+  }
 }

@@ -13,6 +13,10 @@
   margin-left: 30px;
   font-size: 18px;
   letter-spacing: 4px;
+  transition: transform 0.3s, opacity 0.3s, background 0.4s;
+  &:hover {
+    transform: scale(1.02);
+  }
   .img-add-desktop {
     margin: 12px;
   }
@@ -50,7 +54,7 @@
     transition: transform 0.3s, opacity 0.3s, background 0.4s, border 0.3s;
     background-color: transparent;
     &:hover {
-      background: rgba(36, 36, 36, 0.5);
+      background: $btn-gradient;
       border: 1px solid rgba(255, 255, 255, 0.5);
       transform: scale(1.02);
     }
