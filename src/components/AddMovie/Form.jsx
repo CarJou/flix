@@ -1,7 +1,7 @@
 import React, { useContext, useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import MovieContext from '../context/movieContext';
-import Dropzone from 'react-dropzone';
+import Dropzone from '../Dropzone';
 
 const Form = () => {
   //obtener state del form
@@ -34,7 +34,6 @@ const Form = () => {
   //add movie
   const submitForm = (e) => {
     e.preventDefault();
-
     if (title === '') {
       setError(true);
       return;
@@ -53,7 +52,7 @@ const Form = () => {
     <>
       <div className="add-movie-container">
         <h1 className="title-add-movie">Agregar película</h1>
-
+        <Dropzone />
         <form className="form-content" onSubmit={submitForm}>
           <input
             type="text"
