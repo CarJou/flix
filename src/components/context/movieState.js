@@ -10,8 +10,15 @@ const MovieState = (props) => {
     { id: 2, title: 'Bob Esponja' },
   ];
 
+  //localstorage
+  //convierto array en string
+  let initialMovies = JSON.parse(localStorage.getItem('movies'));
+  if (!initialMovies) {
+    initialMovies = [];
+  }
+
   const initialState = {
-    movies: [],
+    movies: [initialMovies],
     createMovie: false,
   };
 
@@ -42,6 +49,7 @@ const MovieState = (props) => {
         createMovie: state.createMovie,
         getMovies,
         addMovie,
+        initialMovies,
       }}
     >
       {props.children}

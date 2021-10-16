@@ -15,11 +15,9 @@ const ListMyMovie = () => {
 
   return (
     <>
-      <ul>
-        {movies.map((movie) => (
-          <MyMovie key={movie.id} movie={movie} />
-        ))}
-      </ul>
+      {movies.map((movie) => (
+        <MyMovie key={movie.id} movie={movie} />
+      ))}
     </>
   );
 };

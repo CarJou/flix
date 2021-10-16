@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import MovieContext from '../context/movieContext';
 import Dropzone from 'react-dropzone';
@@ -6,7 +6,15 @@ import Dropzone from 'react-dropzone';
 const Form = () => {
   //obtener state del form
   const moviesContext = useContext(MovieContext);
-  const { createMovie, addMovie } = moviesContext;
+  const { movies, addMovie, initialMovies } = moviesContext;
+
+  useEffect(() => {
+    if (initialMovies) {
+      localStorage.setItem('movies', JSON.stringify(movies));
+    } else {
+      localStorage.setItem('movies', JSON.stringify([]));
+    }
+  }, [movies]);
 
   const [movie, setMovie] = useState({
     title: '',
