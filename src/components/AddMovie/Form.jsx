@@ -1,64 +1,63 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
+import MovieContext from '../context/movieContext';
 import Dropzone from 'react-dropzone';
-import { v4 as uuid } from 'uuid';
 
 const Form = () => {
-  //peliculas en localstorage
-  // const movieLocal = localStorage.getItem();
-  /*const [addMovie, setAddMovie] = useState({
+  //obtener state del form
+  const moviesContext = useContext(MovieContext);
+  const { createMovie, addMovie } = moviesContext;
+
+  const [movie, setMovie] = useState({
     title: '',
   });
   const [error, setError] = useState(false);
 
   //cuando el usuario escribe en el input
   const handleChange = (e) => {
-    setAddMovie({
-      ...addMovie,
+    setMovie({
+      ...movie,
       [e.target.name]: e.target.value,
     });
   };
   //extraigo valor
-  const { title } = addMovie;
+  const { title } = movie;
 
   //add movie
   const submitForm = (e) => {
     e.preventDefault();
 
-    if (title.trim() === '') {
+    if (title === '') {
       setError(true);
       return;
     }
+
+    addMovie(movie);
     setError(false);
 
-    addMovie.id = uuid();
-
-    //create movie
-    createMovie(addMovie);
-
     //reinciar el form
-    setAddMovie({
+    setMovie({
       title: '',
     });
   };
-*/
+
   return (
     <>
       <div className="add-movie-container">
         <h1 className="title-add-movie">Agregar película</h1>
 
-        <form className="form-content" /*onSubmit={submitForm}*/>
+        <form className="form-content" onSubmit={submitForm}>
           <input
             type="text"
             name="title"
-            // value={title}
-            //onChange={handleChange}
+            value={title}
+            onChange={handleChange}
             className="input-text"
             placeholder="Título"
           />
-          {/*error ? (
+          {error ? (
             <span className="form-error">¡Incluya un título!</span>
-          ) : null*/}
+          ) : null}
           <div className="btn-form-container">
             <button type="submit" className="btn-add">
               subir película
