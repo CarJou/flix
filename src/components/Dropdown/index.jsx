@@ -3,13 +3,11 @@ import { Link } from 'react-router-dom';
 
 const Dropdown = ({ history }) => {
   function handleOnClick() {
-    history.push('/chat');
+    history.push('/');
   }
   return (
     <div className="drop-container">
-      <label for="movie" className="label-drop">
-        VER:
-      </label>
+      <label className="label-drop">VER:</label>
       <select name="movie">
         <option value="popular" onClick={handleOnClick}>
           POPULARES

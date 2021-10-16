@@ -7,6 +7,7 @@ const MovieState = (props) => {
     createMovie: false,
   };
 
+  //ejecutar acciones
   const [state, dispatch] = useReducer(movieReducer, initialState);
 
   //funciones para el form

@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { MovieContext } from '../context/movieContext';
 import Dropzone from 'react-dropzone';
 import { v4 as uuid } from 'uuid';
 

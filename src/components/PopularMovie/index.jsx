@@ -27,8 +27,8 @@ const PopularMovie = ({ fetchUrl, imgUrl }) => {
       <Dropdown />
       {popularMovie &&
         popularMovie.map((movie) => (
-          <Zoom>
-            <div className="card-content" key={movie.id}>
+          <Zoom key={movie.id}>
+            <div className="card-content">
               <img
                 src={`${imgUrl}${movie.backdrop_path}`}
                 alt={movie.title}
