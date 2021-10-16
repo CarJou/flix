@@ -2,18 +2,14 @@ import React, { useState } from 'react';
 import NavAddMobile from '../Navbar/NavAddMobile';
 import Form from './Form';
 
+import MovieProvider from '../context/movieContext';
+
 const AddMovie = () => {
-  const [createMovies, setCreateMovies] = useState([]);
-
-  const createMovie = (addMovie) => {
-    setCreateMovies([...createMovies, addMovie]);
-  };
-
   return (
-    <>
+    <MovieProvider>
       <NavAddMobile />
-      <Form createMovie={createMovie} />
-    </>
+      <Form />
+    </MovieProvider>
   );
 };
 export default AddMovie;

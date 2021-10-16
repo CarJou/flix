@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { MovieContext } from '../context/movieContext';
 import Dropzone from 'react-dropzone';
 import { v4 as uuid } from 'uuid';
 
-const Form = ({ createMovie }) => {
+const Form = () => {
   //peliculas en localstorage
   // const movieLocal = localStorage.getItem();
-  const [addMovie, setAddMovie] = useState({
+  /*const [addMovie, setAddMovie] = useState({
     title: '',
   });
   const [error, setError] = useState(false);
@@ -41,24 +42,24 @@ const Form = ({ createMovie }) => {
       title: '',
     });
   };
-
+*/
   return (
     <>
       <div className="add-movie-container">
         <h1 className="title-add-movie">Agregar película</h1>
 
-        <form className="form-content" onSubmit={submitForm}>
+        <form className="form-content" /*onSubmit={submitForm}*/>
           <input
             type="text"
             name="title"
-            value={title}
-            onChange={handleChange}
+            // value={title}
+            //onChange={handleChange}
             className="input-text"
             placeholder="Título"
           />
-          {error ? (
+          {/*error ? (
             <span className="form-error">¡Incluya un título!</span>
-          ) : null}
+          ) : null*/}
           <div className="btn-form-container">
             <button type="submit" className="btn-add">
               subir película
