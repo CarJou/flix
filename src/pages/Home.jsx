@@ -9,8 +9,8 @@ const Home = () => {
   return (
     <>
       <Navbar />
-      <Header fetchUrl={api.NOW_PLAYING} imgUrl={api.IMAGE_URL} />
-      <PopularMovie fetchUrl={api.POPULAR_URL} imgUrl={api.IMAGE_URL} />
+      <Header imgUrl={api.IMAGE_URL} />
+      <PopularMovie imgUrl={api.IMAGE_URL} />
       <ListMyMovie />
     </>
   );

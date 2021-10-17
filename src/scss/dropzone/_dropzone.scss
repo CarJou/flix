@@ -1,15 +1,53 @@
 .container-dropzone {
   display: flex;
+  flex-direction: column;
   width: 327px;
   height: 81px;
   left: 24px;
   top: 242px;
-  border: 1px dashed #ffffff;
+  border: 1px dashed $white;
   box-sizing: border-box;
   align-items: center;
   justify-content: center;
+  margin-top: 35px;
 }
 
-.drop-input {
+input.drop-input {
   height: 100%;
+}
+
+.btn-dropzone {
+  background-color: transparent;
+  border: none;
+  color: $white;
+  font-size: 20px;
+  letter-spacing: 4px;
+}
+
+li.file-dropzone {
+  list-style: none;
+  color: $white;
+  letter-spacing: 2px;
+  padding: 4px;
+  text-align: center;
+}
+//error
+.container-error {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 35px;
+}
+.error-file {
+  color: $white;
+  letter-spacing: 2px;
+  border-bottom: 8px solid $error;
+  margin: 15px;
+  text-align: center;
+}
+
+div.dropzone.content-error {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }

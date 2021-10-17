@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Stranger from '../../assets/images/card.png';
 import Fade from 'react-reveal/Fade';
 import star from '../../assets/icons/star.png';

@@ -1,26 +1,12 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
-
+import React, { useContext } from 'react';
+import ApiContext from '../context/Api/ApiContext';
 import star from '../../assets/icons/star.png';
-import Zoom from 'react-reveal/Zoom'; // Importing Zoom effect
+import Zoom from 'react-reveal/Zoom';
 import Fade from 'react-reveal/Fade';
 import Dropdown from '../Dropdown';
 
-const PopularMovie = ({ fetchUrl, imgUrl }) => {
-  const [popularMovie, setPopularMovie] = useState([]);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      const response = await axios.get(`${fetchUrl}`);
-      setPopularMovie(response.data.results.slice(0, 4));
-      return response;
-    };
-
-    fetchData();
-  }, []);
-
-  //console.log('popular movies', popularMovie);
-  const handleClick = () => {};
+const PopularMovie = ({ imgUrl }) => {
+  const { popularMovie } = useContext(ApiContext);
 
   return (
     <div className="card-container">
@@ -32,7 +18,6 @@ const PopularMovie = ({ fetchUrl, imgUrl }) => {
               <img
                 src={`${imgUrl}${movie.backdrop_path}`}
                 alt={movie.title}
-                onClick={() => handleClick(movie)}
                 key={movie.id}
                 className="img-card"
               />{' '}

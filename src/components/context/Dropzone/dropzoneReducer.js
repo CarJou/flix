@@ -1,19 +1,19 @@
-import { GET_MOVIES, ADD_MOVIE } from '../types';
+import { CLEAR_ALERT, SHOW_ALERT } from '../../types';
 
 export default (state, action) => {
   switch (action.type) {
-    case GET_MOVIES:
+    case SHOW_ALERT:
       return {
         ...state,
-        movies: action.payload,
+
+        msg_file: action.payload,
       };
 
-    case ADD_MOVIE:
+    case CLEAR_ALERT:
       return {
         ...state,
-        movies: [...state.movies, action.payload],
+        msg_file: null,
       };
-
     default:
       return state;
   }

@@ -1,22 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React, { useContext } from 'react';
+import ApiContext from '../context/Api/ApiContext';
 import play from '../../assets/icons/play.png';
 import plus from '../../assets/icons/plus.png';
-import axios from 'axios';
 import Fade from 'react-reveal/Fade';
 import Bounce from 'react-reveal/Bounce';
 import Zoom from 'react-reveal/Zoom';
 
-const Header = ({ fetchUrl, imgUrl }) => {
-  const [trending, setTrending] = useState([]);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      const response = await axios.get(`${fetchUrl}`);
-      setTrending(response.data.results.slice(0, 1));
-      return response;
-    };
-    fetchData();
-  }, []);
+const Header = ({ imgUrl }) => {
+  const { trending } = useContext(ApiContext);
 
   return (
     <header className="container">

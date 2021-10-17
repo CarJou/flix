@@ -1,6 +1,6 @@
 import React, { useEffect, useContext } from 'react';
 import MyMovie from './MyMovie';
-import MovieContext from '../context/movieContext';
+import MovieContext from '../context/Movies/movieContext';
 
 const ListMyMovie = () => {
   //traer peliculas de initialState

@@ -2,7 +2,7 @@ import React, { useReducer } from 'react';
 import movieContext from './movieContext';
 import movieReducer from './movieReducer';
 import { v4 as uuid } from 'uuid';
-import { GET_MOVIES, ADD_MOVIE } from '../types';
+import { GET_MOVIES, ADD_MOVIE } from '../../types';
 
 const MovieState = (props) => {
   const movies = [

@@ -1,6 +1,6 @@
 import React, { useContext, useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import MovieContext from '../context/movieContext';
+import MovieContext from '../context/Movies/movieContext';
 import Dropzone from '../Dropzone';
 
 const Form = () => {
