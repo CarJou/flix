@@ -6,7 +6,7 @@ El diseño responsive está codeado en SASS 💅 las interacciones y estados tam
 
  Las animaciones que se pueden ver en Home las hice con React Reveal (https://www.react-reveal.com/)
  
- Usuaria/o podrá cargar sus propias películas con un botón desde la Navbar. Para agregar el título utilicé Context, uuid para agregar IDs de forma dinámica y localStorage, ya que también deben verse en Home.
+ El o la usuario/a podrá cargar sus propias películas con un botón desde la Navbar. Para agregar el título utilicé Context, uuid para agregar IDs de forma dinámica y localStorage, ya que también deben verse en Home.
  
  En cuanto a las imágenes subidas a través de Dropzone la funcionalidad está lograda, sólo falta poder guardar esas imágenes de forma dinámica con localStorage como ya lo estoy haciendo con el título de la película.
  
