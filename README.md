@@ -1,70 +1,20 @@
-# Getting Started with Create React App
+# LITEFLIX 🎬
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+En este proyecto utilicé la API pública The Movie DB (https://www.themoviedb.org/documentation/api/discover)
 
-## Available Scripts
+El diseño responsive está codeado en SASS 💅 las interacciones y estados también.
 
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+ Las animaciones que se pueden ver en Home las hice con React Reveal (https://www.react-reveal.com/)
+ 
+ Usuaria/o podrá cargar sus propias películas con un botón desde la Navbar. Para agregar el título utilicé Context, uuid para agregar IDs de forma dinámica y localStorage, ya que también deben verse en Home.
+ 
+ En cuanto a las imágenes subidas a través de Dropzone la funcionalidad está lograda, sólo falta poder guardar esas imágenes de forma dinámica con localStorage como ya lo estoy haciendo con el título de la película.
+ 
+ El proyecto cuenta con tres Context: 
+ 1) Dropzone Context: Actualmente lo utilizo para poder enviar alertas en caso de que el archivo no corresponda o supere el límite máximo. Luego se deberá utilizar para poder guardar las imágenes en localStorage y que el usuario/a pueda tener una experiencia plena.
+ 2) Movie Context: Se creó con el fin de poder tener los datos del formulario "Agregar película" de forma global.
+ 3) API Context: Se creó con el fin de poder hacer llamadas a la API de forma global. Dejando así el código de los componentes más limpios y reutilizables.
+ 
+ Espero poder seguir avanzando, <strong>¡Muchas gracias por leer!</strong> 😁
+ 
+ 
