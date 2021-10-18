@@ -15,6 +15,10 @@ El diseño responsive está codeado en SASS 💅 las interacciones y estados tam
  2) Movie Context: Se creó con el fin de poder tener los datos del formulario "Agregar película" de forma global.
  3) API Context: Se creó con el fin de poder hacer llamadas a la API de forma global. Dejando así el código de los componentes más limpios y reutilizables.
  
- Espero poder seguir avanzando, <strong>¡Muchas gracias por leer!</strong> 😁
+ ## Demo🚀
+ https://liteflix-phi.vercel.app/
+ 
+ 
+ ### Espero poder seguir avanzando, <strong>¡Muchas gracias por leer!</strong> 😁
  
  
