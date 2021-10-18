@@ -7,7 +7,7 @@ import MsgAlert from './MsgAlert';
 const Dropzone = () => {
   const dropzoneContext = useContext(DropzoneContext);
 
-  const { showAlert, msg_file } = dropzoneContext;
+  const { showAlert, msg_file, uploadFile } = dropzoneContext;
 
   const onDropRejected = () => {
     showAlert('¡ERROR! No se pudo cargar la película, el límite es 1MB');
@@ -16,8 +16,10 @@ const Dropzone = () => {
   //para que no reenderice en loop usamos usecallback
   //mejora la perfo
   const onDropAccepted = useCallback((acceptedFiles) => {
-    console.log(acceptedFiles);
-  });
+    console.log(acceptedFiles[0].path);
+
+    uploadFile(acceptedFiles[0].path);
+  }, []);
 
   //extraigo contenido de dropzone
   const { getRootProps, getInputProps, isDragActive, acceptedFiles } =
