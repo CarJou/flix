@@ -3,14 +3,12 @@ import ApiContext from '../context/Api/ApiContext';
 import star from '../../assets/icons/star.png';
 import Zoom from 'react-reveal/Zoom';
 import Fade from 'react-reveal/Fade';
-import Dropdown from '../Dropdown';
 
 const PopularMovie = ({ imgUrl }) => {
   const { popularMovie } = useContext(ApiContext);
 
   return (
     <div className="card-container">
-      <Dropdown />
       {popularMovie &&
         popularMovie.map((movie) => (
           <Zoom key={movie.id}>

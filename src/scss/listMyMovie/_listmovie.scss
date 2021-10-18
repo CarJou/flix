@@ -1,0 +1,11 @@
+.card-movie-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.mymovie-title {
+  color: $white;
+  padding: 35px;
+  letter-spacing: 5px;
+}

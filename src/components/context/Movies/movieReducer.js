@@ -12,6 +12,7 @@ export default (state, action) => {
       return {
         ...state,
         movies: [...state.movies, action.payload],
+        createMovie: [...state.createMovie, action.payload],
       };
 
     default:

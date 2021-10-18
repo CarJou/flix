@@ -6,30 +6,31 @@ import Dropzone from '../Dropzone';
 const Form = () => {
   //obtener state del form
   const moviesContext = useContext(MovieContext);
-  const { movies, addMovie, initialMovies } = moviesContext;
+  const { movie, addMovie, initialMovies } = moviesContext;
 
-  useEffect(() => {
+  //let storedMovie = movie.find(movie.id);
+  /*useEffect(() => {
     if (initialMovies) {
       localStorage.setItem('movies', JSON.stringify(movies));
     } else {
       localStorage.setItem('movies', JSON.stringify([]));
     }
-  }, [movies]);
+  }, [movies]);*/
 
-  const [movie, setMovie] = useState({
+  const [dataForm, setDataForm] = useState({
     title: '',
   });
   const [error, setError] = useState(false);
 
   //cuando el usuario escribe en el input
   const handleChange = (e) => {
-    setMovie({
-      ...movie,
+    setDataForm({
+      ...dataForm,
       [e.target.name]: e.target.value,
     });
   };
   //extraigo valor
-  const { title } = movie;
+  const { title } = dataForm;
 
   //add movie
   const submitForm = (e) => {
@@ -39,11 +40,11 @@ const Form = () => {
       return;
     }
 
-    addMovie(movie);
+    addMovie(dataForm);
     setError(false);
 
     //reinciar el form
-    setMovie({
+    setDataForm({
       title: '',
     });
   };

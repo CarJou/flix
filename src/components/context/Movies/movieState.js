@@ -1,31 +1,28 @@
-import React, { useReducer } from 'react';
-import movieContext from './movieContext';
+import React, { useReducer, useEffect } from 'react';
+import MovieContext from './movieContext';
 import movieReducer from './movieReducer';
 import { v4 as uuid } from 'uuid';
 import { GET_MOVIES, ADD_MOVIE } from '../../types';
 
 const MovieState = (props) => {
-  const movies = [
-    { id: 1, title: 'Harry Potter' },
-    { id: 2, title: 'Bob Esponja' },
-  ];
-
-  //localstorage
-  //convierto array en string
-  let initialMovies = JSON.parse(localStorage.getItem('movies'));
-  if (!initialMovies) {
-    initialMovies = [];
-  }
+  const movies = [];
 
   const initialState = {
-    movies: [initialMovies],
-    createMovie: false,
+    movies: localStorage.getItem('movies')
+      ? JSON.parse(localStorage.getItem('movies'))
+      : [],
+    createMovie: localStorage.getItem('createMovie')
+      ? JSON.parse(localStorage.getItem('createMovie'))
+      : [],
   };
 
   //ejecutar acciones
   const [state, dispatch] = useReducer(movieReducer, initialState);
 
-  //funciones para el form
+  useEffect(() => {
+    localStorage.setItem('movies', JSON.stringify(state.movies));
+    localStorage.setItem('createMovie', JSON.stringify(state.createMovie));
+  }, [state]);
 
   //obtengo peliculas
   const getMovies = () => {
@@ -43,17 +40,16 @@ const MovieState = (props) => {
   };
 
   return (
-    <movieContext.Provider
+    <MovieContext.Provider
       value={{
         movies: state.movies,
         createMovie: state.createMovie,
         getMovies,
         addMovie,
-        initialMovies,
       }}
     >
       {props.children}
-    </movieContext.Provider>
+    </MovieContext.Provider>
   );
 };
 export default MovieState;
